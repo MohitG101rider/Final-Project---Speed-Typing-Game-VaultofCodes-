@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Master</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--login -->
+  <div class="login-screen" id="loginScreen">
+    <h1>👤 Welcome to Typing Speed Master</h1>
+    <input type="text" id="usernameInput" placeholder="Enter your name..." />
+    <button id="startBtn">Start</button>
+  </div>
+
+  <!--main-->
+  <div class="main-app hidden" id="mainApp">
+
+    <!--header-->
+    <header class="app-header">
+      <h2>🚀 Welcome, <span id="displayName"></span>!</h2>
+      <button id="toggleTheme">🌗</button>
+    </header>
+
+    <!--mode-->
+    <div class="mode-select">
+      <label for="mode">Select Mode:</label>
+      <select id="mode">
+        <option value="normal">Normal</option>
+        <option value="timed">Time Trial</option>
+      </select>
+
+      <select id="timeOptions" class="hidden">
+        <option value="30">30 seconds</option>
+        <option value="60">60 seconds</option>
+        <option value="120">120 seconds</option>
+      </select>
+
+      <button id="beginTest">Begin Typing Test</button>
+    </div>
+
+    <!--input -->
+    <section class="test-area hidden" id="testArea">
+      <div id="quoteDisplay" class="quote-display"></div>
+      <textarea id="inputArea" placeholder="Start typing here..." rows="5"></textarea>
+    </section>
+
+    <!-- stats -->
+    <div class="stats-panel hidden" id="statsPanel">
+      <div><strong>⏱ Time:</strong> <span id="timer">0</span>s</div>
+      <div><strong>⌨️ WPM:</strong> <span id="wpm">0</span></div>
+      <div><strong>🎯 Accuracy:</strong> <span id="accuracy">100</span>%</div>
+      <div><strong>🔢 Score:</strong> <span id="score">0</span></div>
+    </div>
+
+    <!--controls-->
+    <div class="controls hidden" id="controlPanel">
+      <button id="restartBtn">🔁 Restart</button>
+      <button id="viewLeaderboardBtn">🏆 Leaderboard</button>
+    </div>
+
+    <!--leaderboard -->
+    <div class="leaderboard-modal hidden" id="leaderboardModal">
+      <div class="leaderboard-content">
+        <h2>🏆 Leaderboard</h2>
+        <div id="leaderboardList"></div>
+        <button id="closeLeaderboard">Close</button>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>🌟 Vault of Codes | Built by Mohit Gautam</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
